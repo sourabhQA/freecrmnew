@@ -56,6 +56,7 @@ public class LoginPageTest extends TestBase {
 	loginpage.login(prop.getProperty("wrongusername"), prop.getProperty("wrongpassword"));
 	boolean hik = loginpage.validateCrmLogo();
 	Assert.assertTrue(hik);
+	System.out.println("Not able to login when i entered wrong password");
 	}
 	
 	
