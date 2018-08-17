@@ -34,7 +34,7 @@ public class LoginPageTest extends TestBase {
 	
 	
 
-	@Test(priority=2)
+	@Test(priority=4)
 	public void verifyTitle() {
 		String s = loginpage.validateLoginPageTitle();
 	Assert.assertEquals(s, "#1 Free CRM software in the cloud for sales and service");
@@ -46,9 +46,19 @@ public class LoginPageTest extends TestBase {
 		Assert.assertTrue(crm);
 	}
 	
-	@Test(priority=1)
+	@Test(priority=2)
 	public void loginTest() {
 	homepage =	loginpage.login(prop.getProperty("username"), prop.getProperty("password"));
 	}
+	
+	@Test(priority=1)
+	public void wrongcredTest() {
+	loginpage.login(prop.getProperty("wrongusername"), prop.getProperty("wrongpassword"));
+	boolean hik = loginpage.validateCrmLogo();
+	Assert.assertTrue(hik);
+	}
+	
+	
+	
 	
 }
