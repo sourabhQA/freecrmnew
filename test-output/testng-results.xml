@@ -1,41 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2018-08-17T06:49:38Z" name="Default suite" finished-at="2018-08-17T06:50:55Z" duration-ms="77166">
+  <suite started-at="2018-08-18T08:31:08Z" name="Default suite" finished-at="2018-08-18T08:31:33Z" duration-ms="24365">
     <groups>
     </groups>
-    <test started-at="2018-08-17T06:49:38Z" name="Default test" finished-at="2018-08-17T06:50:55Z" duration-ms="77166">
-      <class name="com.crm.qa.testcases.HomePageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.crm.qa.testcases.HomePageTest@659499f1]" started-at="2018-08-17T06:49:38Z" name="setup" finished-at="2018-08-17T06:50:02Z" duration-ms="24568" status="PASS">
+    <test started-at="2018-08-18T08:31:08Z" name="Default test" finished-at="2018-08-18T08:31:33Z" duration-ms="24365">
+      <class name="com.crm.qa.testcases.ContactsPageTest">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:com.crm.qa.testcases.ContactsPageTest@49049a04]" started-at="2018-08-18T08:31:08Z" name="Setup" finished-at="2018-08-18T08:31:32Z" duration-ms="23736" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyusertitle()[pri:1, instance:com.crm.qa.testcases.HomePageTest@659499f1]" started-at="2018-08-17T06:50:02Z" name="verifyusertitle" finished-at="2018-08-17T06:50:02Z" duration-ms="200" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyusertitle -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.crm.qa.testcases.HomePageTest@659499f1]" started-at="2018-08-17T06:50:02Z" name="teardown" finished-at="2018-08-17T06:50:04Z" duration-ms="1374" status="PASS">
+        </test-method> <!-- Setup -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.crm.qa.testcases.ContactsPageTest@49049a04]" started-at="2018-08-18T08:31:32Z" name="teardown" finished-at="2018-08-18T08:31:33Z" duration-ms="458" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.crm.qa.testcases.HomePageTest@659499f1]" started-at="2018-08-17T06:50:04Z" name="setup" finished-at="2018-08-17T06:50:30Z" duration-ms="26547" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyCrm()[pri:2, instance:com.crm.qa.testcases.HomePageTest@659499f1]" started-at="2018-08-17T06:50:30Z" name="verifyCrm" finished-at="2018-08-17T06:50:30Z" duration-ms="107" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method signature="verifycontactlabel()[pri:1, instance:com.crm.qa.testcases.ContactsPageTest@49049a04]" started-at="2018-08-18T08:31:33Z" name="verifycontactlabel" finished-at="2018-08-18T08:31:33Z" duration-ms="112" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
             <message>
-              <![CDATA[expected [saurabh singh] but found [true]]]>
+              <![CDATA[no such session
+  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 79 milliseconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'SAURABH-PC', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '10.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73), userDataDir=C:\Users\Saurabh\AppData\Local\Temp\scoped_dir2832_27735}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=68.0.3440.106, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 6e52a97a23cfd1d1cca34f40cc22edb0
+*** Element info: {Using=xpath, value=//td[contains(text(),'Contacts')]}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [saurabh singh] but found [true]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:442)
-at com.crm.qa.testcases.HomePageTest.verifyCrm(HomePageTest.java:45)
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: no such session
+  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 79 milliseconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'SAURABH-PC', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '10.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73), userDataDir=C:\Users\Saurabh\AppData\Local\Temp\scoped_dir2832_27735}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=68.0.3440.106, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 6e52a97a23cfd1d1cca34f40cc22edb0
+*** Element info: {Using=xpath, value=//td[contains(text(),'Contacts')]}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy10.isDisplayed(Unknown Source)
+at com.crm.qa.pages.ContactsPage.Contactslabel(ContactsPage.java:23)
+at com.crm.qa.testcases.ContactsPageTest.verifycontactlabel(ContactsPageTest.java:49)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -63,27 +81,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyCrm -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.crm.qa.testcases.HomePageTest@659499f1]" started-at="2018-08-17T06:50:30Z" name="teardown" finished-at="2018-08-17T06:50:31Z" duration-ms="946" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.crm.qa.testcases.HomePageTest@659499f1]" started-at="2018-08-17T06:50:31Z" name="setup" finished-at="2018-08-17T06:50:54Z" duration-ms="22272" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifymenubar()[pri:3, instance:com.crm.qa.testcases.HomePageTest@659499f1]" started-at="2018-08-17T06:50:54Z" name="verifymenubar" finished-at="2018-08-17T06:50:54Z" duration-ms="140" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifymenubar -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.crm.qa.testcases.HomePageTest@659499f1]" started-at="2018-08-17T06:50:54Z" name="teardown" finished-at="2018-08-17T06:50:55Z" duration-ms="962" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- com.crm.qa.testcases.HomePageTest -->
+        </test-method> <!-- verifycontactlabel -->
+      </class> <!-- com.crm.qa.testcases.ContactsPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

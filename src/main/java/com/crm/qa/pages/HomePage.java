@@ -1,6 +1,7 @@
 package com.crm.qa.pages;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -14,6 +15,10 @@ public class HomePage extends TestBase {
 	
 	@FindBy(id = "handle_CRMBLOG")
 	WebElement CRMProtitle;
+	
+	
+	@FindBy(xpath="//a[contains(text(),'Contacts')]")
+	WebElement Contactstab;
 	
 	
 	@FindBy(xpath ="//ul[@class=\"mlddm\"]")
@@ -44,9 +49,22 @@ public class HomePage extends TestBase {
 		
 	}
 	
+	public ContactsPage Contactspage() {
+		
+		
+		
+		 Contactstab.click();
+	return new ContactsPage();
+	}
 	
 	
 	
+	public void clickonnewcontact() {
+		Actions action = new Actions(Driver);
+		action.moveToElement(Contactstab).build().perform();
+		
+		
+	}
 
 
 }

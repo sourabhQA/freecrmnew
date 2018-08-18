@@ -12,7 +12,7 @@ import org.openqa.selenium.WebDriver;
 import com.crm.qa.base.TestBase;
 
 public class TestUtil extends TestBase{
-	public static long PAGE_IMPLICIT_WAIT = 20;
+	public static long PAGE_IMPLICIT_WAIT = 30;
 
 	
 	
