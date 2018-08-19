@@ -1,18 +1,21 @@
 package com.crm.qa.testcases;
 
+
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.HomePage;
 import com.crm.qa.pages.LoginPage;
+import com.crm.qa.util.TestUtil;
 
 public class LoginPageTest extends TestBase {
 	LoginPage loginpage;
 	HomePage homepage;
-	
+	public String sheetname = "login";
 	
 	  public LoginPageTest(){
 		super();
@@ -31,6 +34,13 @@ public class LoginPageTest extends TestBase {
 		
 	}
 	
+	@DataProvider
+	public  Object[][] getlogindata() {
+	Object data[][] = 	TestUtil.getTestdata(sheetname);
+		return data;
+		
+	}
+	
 	
 	
 
@@ -46,9 +56,11 @@ public class LoginPageTest extends TestBase {
 		Assert.assertTrue(crm);
 	}
 	
-	@Test(priority=2)
-	public void loginTest() {
-	homepage =	loginpage.login(prop.getProperty("username"), prop.getProperty("password"));
+	@Test(dataProvider="getlogindata" , priority = 2)
+	public void loginTest(String Username , String password) {
+		
+	homepage =	loginpage.login(Username, password);
+	
 	}
 	
 	@Test(priority=1)
