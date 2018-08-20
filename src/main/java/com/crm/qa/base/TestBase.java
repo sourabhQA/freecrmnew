@@ -8,9 +8,11 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.annotations.Test;
 
 import com.crm.qa.util.TestUtil;
+import com.crm.qa.util.WebEventListener;
 
 
 
@@ -48,7 +50,10 @@ import com.crm.qa.util.TestUtil;
 			System.out.println("hey");
 		}
 		
-		
+		    EventFiringWebDriver e_driver = new EventFiringWebDriver(Driver);
+		    WebEventListener eventlistener = new WebEventListener();
+		    e_driver.register(eventlistener);
+		    Driver = e_driver;
 			Driver.manage().window().maximize();
 			Driver.manage().deleteAllCookies();
 		    Driver.manage().timeouts().implicitlyWait(TestUtil.PAGE_IMPLICIT_WAIT, TimeUnit.SECONDS);
