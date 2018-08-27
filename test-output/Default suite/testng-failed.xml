@@ -5,8 +5,11 @@
     <classes>
       <class name="com.crm.qa.testcases.LoginPageTest">
         <methods>
+          <include name="verifyTitle"/>
           <include name="setUp"/>
+          <include name="verifyLogo"/>
           <include name="close"/>
+          <include name="wrongcredTest"/>
           <include name="loginTest"/>
         </methods>
       </class> <!-- com.crm.qa.testcases.LoginPageTest -->

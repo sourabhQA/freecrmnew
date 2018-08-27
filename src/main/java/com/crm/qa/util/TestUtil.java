@@ -14,6 +14,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.io.FileHandler;
 
 import com.crm.qa.base.TestBase;
 
@@ -31,7 +32,7 @@ public class TestUtil extends TestBase{
 	
 		String currentdir = System.getProperty("user.dir");
 		TakesScreenshot scrShot =((TakesScreenshot)Driver);
-	
+
 		File scrFile = 	scrShot.getScreenshotAs(OutputType.FILE); 
 		try {
 			FileUtils.copyDirectory(scrFile, new File(currentdir + "/SCREENSHOTS/" + System.currentTimeMillis() + ".png"));
